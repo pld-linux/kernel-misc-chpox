@@ -14,7 +14,7 @@ License:	GPL
 Group:		Base/Kernel
 Source0:	http://www.cluster.kiev.ua/support/files/%{_orig_name}-%{version}-1a.tar.gz
 # Source0-md5:	06db5787b13f59aa9f1c8d45fe7cfd81
-%{!?_without_dist_kernel:BuildRequires:         kernel-headers}
+%{!?_without_dist_kernel:BuildRequires:	kernel-headers}
 BuildRequires:	%{kgcc_package}
 BuildRequires:	rpmbuild(macros) >= 1.118
 %{!?_without_dist_kernel:%requires_releq_kernel_up}
