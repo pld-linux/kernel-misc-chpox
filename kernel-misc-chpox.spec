@@ -16,6 +16,7 @@ Source0:	http://www.cluster.kiev.ua/support/files/%{_orig_name}-%{version}-1a.ta
 # Source0-md5:	06db5787b13f59aa9f1c8d45fe7cfd81
 %{!?_without_dist_kernel:BuildRequires:         kernel-headers}
 BuildRequires:	%{kgcc_package}
+BuildRequires:	rpmbuild(macros) >= 1.118
 %{!?_without_dist_kernel:%requires_releq_kernel_up}
 Requires(post,postun):		/sbin/depmod
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -70,16 +71,16 @@ cp vmadump.smp.o $RPM_BUILD_ROOT/lib/modules/%{_kernel_ver}smp/misc/vmadump.o
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/sbin/depmod -a %{!?_without_dist_kernel:-F /boot/System.map-%{_kernel_ver} }%{_kernel_ver}
+%depmod %{_kernel_ver}
 
 %postun
-/sbin/depmod -a %{!?_without_dist_kernel:-F /boot/System.map-%{_kernel_ver} }%{_kernel_ver}
+%depmod %{_kernel_ver}
 
 %post	-n kernel-smp-misc-%{_orig_name}
-/sbin/depmod -a %{!?_without_dist_kernel:-F /boot/System.map-%{_kernel_ver}smp }%{_kernel_ver}smp
+%depmod %{_kernel_ver}smp
 
 %postun -n kernel-smp-misc-%{_orig_name}
-/sbin/depmod -a %{!?_without_dist_kernel:-F /boot/System.map-%{_kernel_ver}smp }%{_kernel_ver}smp
+%depmod %{_kernel_ver}smp
 
 %files
 %defattr(644,root,root,755)
