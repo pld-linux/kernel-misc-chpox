@@ -19,11 +19,11 @@ Prereq:		/sbin/depmod
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-%{origname} is a set of the Linux kernel modules for transparent
+%{_orig_name} is a set of the Linux kernel modules for transparent
 dumping of specified processes into disk file and restarting ones.
 
 %description -l pl
-%{origname} to zestaw modu³ów j±dra pozwalaj±cy na transparentne
+%{_orig_name} to zestaw modu³ów j±dra pozwalaj±cy na transparentne
 "zrzucanie" okre¶lonych procesów do pliku, oraz ich restart.
 
 %package -n kernel-smp-misc-%{_orig_name}
@@ -35,11 +35,11 @@ Group:		Base/Kernel
 Prereq:		/sbin/depmod
 
 %description -n kernel-smp-misc-%{_orig_name}
-%{origname} is a set of the Linux kernel modules for transparent
+%{_orig_name} is a set of the Linux kernel modules for transparent
 dumping of specified processes into disk file and restarting ones.
 
 %description -n kernel-smp-misc-%{_orig_name} -l pl
-%{origname} to zestaw modu³ów j±dra pozwalaj±cy na transparentne
+%{_orig_name} to zestaw modu³ów j±dra pozwalaj±cy na transparentne
 "zrzucanie" okre¶lonych procesów do pliku, oraz ich restart.
 
 %prep
