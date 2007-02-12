@@ -6,7 +6,7 @@
 %define		_rel		0.1
 
 Summary:	Kernel modules for transparent dumping of specified processes
-Summary(pl):	Modu硑 j眃ra pozwalaj眂e na zrzucanie proces體 do pliku
+Summary(pl.UTF-8):   Modu艂y j膮dra pozwalaj膮ce na zrzucanie proces贸w do pliku
 Name:		kernel-misc-%{_orig_name}
 Version:	0.3
 Release:	%{_rel}@%{_kernel_ver_str}
@@ -25,13 +25,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %{_orig_name} is a set of the Linux kernel modules for transparent
 dumping of specified processes into disk file and restarting ones.
 
-%description -l pl
-%{_orig_name} to zestaw modu丑w j眃ra pozwalaj眂y na transparentne
-"zrzucanie" okre秎onych proces體 do pliku, oraz ich restart.
+%description -l pl.UTF-8
+%{_orig_name} to zestaw modu艂贸w j膮dra pozwalaj膮cy na transparentne
+"zrzucanie" okre艣lonych proces贸w do pliku, oraz ich restart.
 
 %package -n kernel-smp-misc-%{_orig_name}
 Summary:	Kernel SMP modules for transparent dumping of specified processes
-Summary(pl):	Modu硑 j眃ra SMP pozwalaj眂e na zrzucanie proces體 do pliku
+Summary(pl.UTF-8):   Modu艂y j膮dra SMP pozwalaj膮ce na zrzucanie proces贸w do pliku
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 %{!?_without_dist_kernel:%requires_releq_kernel_smp}
@@ -41,9 +41,9 @@ Requires(post,postun):		/sbin/depmod
 %{_orig_name} is a set of the Linux SMP kernel modules for transparent
 dumping of specified processes into disk file and restarting ones.
 
-%description -n kernel-smp-misc-%{_orig_name} -l pl
-%{_orig_name} to zestaw modu丑w j眃ra SMP pozwalaj眂y na transparentne
-"zrzucanie" okre秎onych proces體 do pliku, oraz ich restart.
+%description -n kernel-smp-misc-%{_orig_name} -l pl.UTF-8
+%{_orig_name} to zestaw modu艂贸w j膮dra SMP pozwalaj膮cy na transparentne
+"zrzucanie" okre艣lonych proces贸w do pliku, oraz ich restart.
 
 %prep
 %setup -q -n %{_orig_name}-%{version}-1a
