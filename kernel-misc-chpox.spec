@@ -6,7 +6,7 @@
 %define		_rel		0.1
 
 Summary:	Kernel modules for transparent dumping of specified processes
-Summary(pl.UTF-8):   Moduły jądra pozwalające na zrzucanie procesów do pliku
+Summary(pl.UTF-8):	Moduły jądra pozwalające na zrzucanie procesów do pliku
 Name:		kernel-misc-%{_orig_name}
 Version:	0.3
 Release:	%{_rel}@%{_kernel_ver_str}
@@ -31,7 +31,7 @@ dumping of specified processes into disk file and restarting ones.
 
 %package -n kernel-smp-misc-%{_orig_name}
 Summary:	Kernel SMP modules for transparent dumping of specified processes
-Summary(pl.UTF-8):   Moduły jądra SMP pozwalające na zrzucanie procesów do pliku
+Summary(pl.UTF-8):	Moduły jądra SMP pozwalające na zrzucanie procesów do pliku
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 %{!?_without_dist_kernel:%requires_releq_kernel_smp}
